@@ -1,0 +1,51 @@
+export function Footer() {
+  return (
+    <footer className="bg-tmc-green-deep text-tmc-ivory/80 px-8 py-16">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          <div>
+            <div className="text-sm uppercase tracking-[0.3em] text-tmc-gold mb-4">
+              True Medical Concierge
+            </div>
+            <p className="text-sm leading-relaxed">
+              İzmir · MMXXVI<br />
+              info@truemedicalconcierge.com
+            </p>
+          </div>
+
+          <div>
+            <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold/70 mb-4">
+              Site
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/services" className="hover:text-tmc-gold transition-colors">Services</a></li>
+              <li><a href="/process" className="hover:text-tmc-gold transition-colors">Process</a></li>
+              <li><a href="/about" className="hover:text-tmc-gold transition-colors">About</a></li>
+              <li><a href="/contact" className="hover:text-tmc-gold transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold/70 mb-4">
+              Legal
+            </div>
+            <ul className="space-y-2 text-sm">
+              <li><a href="/legal/data-protection" className="hover:text-tmc-gold transition-colors">Data Protection (KVKK)</a></li>
+              <li><a href="/legal/privacy" className="hover:text-tmc-gold transition-colors">Privacy</a></li>
+              <li><a href="/legal/cookies" className="hover:text-tmc-gold transition-colors">Cookies</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="pt-8 border-t border-tmc-gold/20 flex flex-col md:flex-row justify-between items-center gap-4">
+          <span className="text-xs uppercase tracking-[0.25em] text-tmc-ivory/50">
+            © MMXXVI True Medical Concierge
+          </span>
+          <span className="text-xs uppercase tracking-[0.25em] text-tmc-ivory/50">
+            EN · TR · DE · FR
+          </span>
+        </div>
+      </div>
+    </footer>
+  );
+}

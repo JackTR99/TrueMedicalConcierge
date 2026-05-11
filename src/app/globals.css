@@ -1,26 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Marka — True Medical Concierge (marka rehberi) */
+  --tmc-green: #0F4C3A;       /* Royal Forest */
+  --tmc-green-deep: #0A382B;
+  --tmc-gold: #B9863E;        /* Antique Gold */
+  --tmc-gold-light: #D4A75A;  /* Champagne */
+  --tmc-ivory: #F5F0E6;       /* Ana arka plan */
+  --tmc-parchment: #EBE3D3;
+  --tmc-charcoal: #1A1A1A;
+  --tmc-ink: #2B2520;
+  --tmc-muted: #8A7B68;
+
+  --background: var(--tmc-ivory);
+  --foreground: var(--tmc-ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-tmc-green: var(--tmc-green);
+  --color-tmc-green-deep: var(--tmc-green-deep);
+  --color-tmc-gold: var(--tmc-gold);
+  --color-tmc-gold-light: var(--tmc-gold-light);
+  --color-tmc-ivory: var(--tmc-ivory);
+  --color-tmc-parchment: var(--tmc-parchment);
+  --color-tmc-charcoal: var(--tmc-charcoal);
+  --color-tmc-ink: var(--tmc-ink);
+  --color-tmc-muted: var(--tmc-muted);
+
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-carlito), "Calibri", -apple-system, "Segoe UI", sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
