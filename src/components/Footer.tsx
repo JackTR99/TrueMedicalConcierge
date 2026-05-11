@@ -1,7 +1,18 @@
+import Image from "next/image";
+
 export function Footer() {
   return (
-    <footer className="bg-tmc-green-deep text-tmc-ivory/80 px-8 py-16">
-      <div className="max-w-6xl mx-auto">
+    <footer className="relative bg-tmc-green-deep text-tmc-ivory/80 px-8 py-16 overflow-hidden">
+      <Image
+        src="/logo.png"
+        alt=""
+        width={600}
+        height={600}
+        aria-hidden
+        className="absolute -right-40 -bottom-40 w-[32rem] h-[32rem] object-contain opacity-[0.05] pointer-events-none select-none"
+      />
+
+      <div className="relative max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="text-sm uppercase tracking-[0.3em] text-tmc-gold mb-4">

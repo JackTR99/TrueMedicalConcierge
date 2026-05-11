@@ -68,11 +68,14 @@ export default function Contact() {
                 <label className="block text-[10px] uppercase tracking-[0.3em] text-tmc-gold mb-2">
                   Message
                 </label>
-                <textarea
-                  name="message"
-                  rows={5}
-                  className="w-full bg-transparent border-b border-tmc-ink/20 focus:border-tmc-gold focus:outline-none py-3 text-base text-tmc-ink resize-none"
-                />
+                <div className="relative">
+                  <textarea
+                    name="message"
+                    rows={5}
+                    className="peer w-full bg-transparent border-b border-tmc-ink/20 focus:outline-none py-3 text-base text-tmc-ink resize-none"
+                  />
+                  <span className="absolute bottom-0 left-0 w-0 h-px bg-tmc-gold transition-all duration-500 peer-focus:w-full" />
+                </div>
               </div>
 
               <button
@@ -135,12 +138,15 @@ function Field({
       <label className="block text-[10px] uppercase tracking-[0.3em] text-tmc-gold mb-2">
         {label}
       </label>
-      <input
-        type={type}
-        name={name}
-        required={required}
-        className="w-full bg-transparent border-b border-tmc-ink/20 focus:border-tmc-gold focus:outline-none py-3 text-base text-tmc-ink"
-      />
+      <div className="relative">
+        <input
+          type={type}
+          name={name}
+          required={required}
+          className="peer w-full bg-transparent border-b border-tmc-ink/20 focus:outline-none py-3 text-base text-tmc-ink"
+        />
+        <span className="absolute bottom-0 left-0 w-0 h-px bg-tmc-gold transition-all duration-500 peer-focus:w-full" />
+      </div>
     </div>
   );
 }
@@ -159,20 +165,23 @@ function SelectField({
       <label className="block text-[10px] uppercase tracking-[0.3em] text-tmc-gold mb-2">
         {label}
       </label>
-      <select
-        name={name}
-        defaultValue=""
-        className="w-full bg-transparent border-b border-tmc-ink/20 focus:border-tmc-gold focus:outline-none py-3 text-base text-tmc-ink"
-      >
-        <option value="" disabled>
-          —
-        </option>
-        {options.map((o) => (
-          <option key={o} value={o}>
-            {o}
+      <div className="relative">
+        <select
+          name={name}
+          defaultValue=""
+          className="peer w-full bg-transparent border-b border-tmc-ink/20 focus:outline-none py-3 text-base text-tmc-ink"
+        >
+          <option value="" disabled>
+            —
           </option>
-        ))}
-      </select>
+          {options.map((o) => (
+            <option key={o} value={o}>
+              {o}
+            </option>
+          ))}
+        </select>
+        <span className="absolute bottom-0 left-0 w-0 h-px bg-tmc-gold transition-all duration-500 peer-focus:w-full" />
+      </div>
     </div>
   );
 }

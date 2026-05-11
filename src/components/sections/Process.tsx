@@ -1,3 +1,8 @@
+"use client";
+
+import { motion, type Variants } from "motion/react";
+import { Reveal } from "@/components/Reveal";
+
 const steps = [
   {
     numeral: "I",
@@ -21,34 +26,63 @@ const steps = [
   },
 ];
 
+const stepContainer: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { staggerChildren: 0.12 },
+  },
+};
+
+const step: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
 export function Process() {
   return (
     <section className="bg-tmc-parchment py-32 px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-20">
-          <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold mb-4">
-            Process
+        <Reveal>
+          <div className="text-center mb-20">
+            <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold mb-4">
+              Process
+            </div>
+            <h2 className="font-serif italic text-tmc-green text-4xl md:text-5xl leading-tight">
+              Four steps, end to end.
+            </h2>
           </div>
-          <h2 className="font-serif italic text-tmc-green text-4xl md:text-5xl leading-tight">
-            Four steps, end to end.
-          </h2>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {steps.map((step) => (
-            <div key={step.numeral} className="text-center md:text-left">
+        <motion.div
+          variants={stepContainer}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+          className="grid grid-cols-1 md:grid-cols-4 gap-12"
+        >
+          {steps.map((s) => (
+            <motion.div
+              key={s.numeral}
+              variants={step}
+              className="text-center md:text-left"
+            >
               <div className="font-serif italic text-tmc-gold text-5xl md:text-6xl mb-6">
-                {step.numeral}
+                {s.numeral}
               </div>
               <h3 className="font-serif italic text-tmc-green text-xl md:text-2xl mb-4">
-                {step.title}
+                {s.title}
               </h3>
               <p className="text-sm text-tmc-ink/75 leading-relaxed">
-                {step.body}
+                {s.body}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
