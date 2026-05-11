@@ -1,7 +1,10 @@
+export type ServiceIcon = "smile" | "sparkles" | "scale" | "bone";
+
 export interface Service {
   slug: string;
   title: string;
   short: string;
+  icon: ServiceIcon;
   overview: string;
   scope: string[];
   process: { title: string; body: string }[];
@@ -13,6 +16,7 @@ export const services: Service[] = [
     slug: "dental",
     title: "Dental & Oral Health",
     short: "Implants, smile design, and oral surgery.",
+    icon: "smile",
     overview:
       "Comprehensive dental care delivered by Türkiye's leading specialists — from single-tooth implants to full-mouth restorations, executed in clinics equipped to international standards. Every plan begins with a remote consultation and ends with discreet follow-up wherever you reside.",
     scope: [
@@ -38,6 +42,7 @@ export const services: Service[] = [
     slug: "plastic",
     title: "Plastic & Aesthetic Surgery",
     short: "Facial, body, and restorative aesthetic procedures.",
+    icon: "sparkles",
     overview:
       "From restorative reconstruction to refined aesthetic refinement, the surgeons in our network operate with discretion and precision. Cases are reviewed individually; nothing is promised that the anatomy will not support, and nothing is recommended that the patient does not actively seek.",
     scope: [
@@ -63,6 +68,7 @@ export const services: Service[] = [
     slug: "bariatric",
     title: "Bariatric Surgery",
     short: "Sleeve gastrectomy, bypass, and metabolic surgery.",
+    icon: "scale",
     overview:
       "Bariatric and metabolic surgery delivered by experienced teams whose work has been recognized internationally. Candidacy is assessed strictly; the surgical option is offered only when it is the right answer for the patient.",
     scope: [
@@ -88,6 +94,7 @@ export const services: Service[] = [
     slug: "orthopedics",
     title: "Orthopedics",
     short: "Joint, spine, and sports injury surgery.",
+    icon: "bone",
     overview:
       "Joint replacement, spine surgery, and sports medicine delivered by surgeons with international training and large operative volumes. Conservative options are exhausted before surgery is considered; when surgery is chosen, it is planned with the same care.",
     scope: [

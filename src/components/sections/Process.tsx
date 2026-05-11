@@ -30,16 +30,16 @@ const stepContainer: Variants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { staggerChildren: 0.12 },
+    transition: { staggerChildren: 0.25, delayChildren: 0.1 },
   },
 };
 
 const step: Variants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 60 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 1.1, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -62,7 +62,7 @@ export function Process() {
           variants={stepContainer}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+          viewport={{ once: true, amount: 0.2 }}
           className="grid grid-cols-1 md:grid-cols-4 gap-12"
         >
           {steps.map((s) => (

@@ -1,6 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { services, getServiceBySlug } from "@/lib/services";
+import { Smile, Sparkles, Scale, Bone, type LucideIcon } from "lucide-react";
+import { services, getServiceBySlug, type ServiceIcon } from "@/lib/services";
+
+const iconMap: Record<ServiceIcon, LucideIcon> = {
+  smile: Smile,
+  sparkles: Sparkles,
+  scale: Scale,
+  bone: Bone,
+};
 
 export function generateStaticParams() {
   return services.map((s) => ({ slug: s.slug }));
@@ -29,6 +37,7 @@ export default async function ServiceDetail({
   const service = getServiceBySlug(slug);
   if (!service) notFound();
 
+  const Icon = iconMap[service.icon];
   const numerals = ["I", "II", "III", "IV"];
 
   return (
@@ -38,6 +47,7 @@ export default async function ServiceDetail({
           <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold mb-6">
             Specialty
           </div>
+          <Icon className="text-tmc-gold mb-8" size={64} strokeWidth={1} />
           <h1 className="font-serif italic text-tmc-green text-5xl md:text-6xl lg:text-7xl leading-tight">
             {service.title}
           </h1>

@@ -15,11 +15,11 @@ export function Manifesto() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.15} className="flex items-center justify-center">
+          <Reveal delay={0.25} className="flex items-center justify-center">
             <motion.div
-              animate={{ y: [0, -10, 0] }}
+              animate={{ y: [0, -28, 0] }}
               transition={{
-                duration: 5,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -35,7 +35,7 @@ export function Manifesto() {
           </Reveal>
         </div>
 
-        <Reveal delay={0.2}>
+        <Reveal delay={0.3}>
           <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-tmc-gold/30 pt-16">
             <ValuePillar
               label="Discretion"
