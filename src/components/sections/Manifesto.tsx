@@ -6,11 +6,11 @@ import { Reveal } from "@/components/Reveal";
 
 export function Manifesto() {
   return (
-    <section className="bg-tmc-green text-tmc-ivory py-32 px-8">
+    <section className="bg-tmc-green text-tmc-ivory py-20 md:py-32 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <Reveal>
-            <p className="font-serif italic text-3xl md:text-4xl lg:text-5xl leading-tight">
+            <p className="font-serif italic text-2xl md:text-4xl lg:text-5xl leading-tight">
               Your physician is chosen for you. Your records remain private. The journey, only yours.
             </p>
           </Reveal>
@@ -29,14 +29,14 @@ export function Manifesto() {
                 alt="True Medical Concierge"
                 width={500}
                 height={500}
-                className="w-72 h-72 md:w-80 md:h-80 object-contain"
+                className="w-56 h-56 md:w-80 md:h-80 object-contain"
               />
             </motion.div>
           </Reveal>
         </div>
 
         <Reveal delay={0.3}>
-          <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-tmc-gold/30 pt-16">
+          <div className="mt-16 md:mt-24 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 border-t border-tmc-gold/30 pt-12 md:pt-16">
             <ValuePillar
               label="Discretion"
               body="Your records and every stage of your journey belong solely to you."

@@ -31,14 +31,14 @@ const card: Variants = {
 
 export function Services() {
   return (
-    <section className="bg-tmc-ivory py-32 px-8">
+    <section className="bg-tmc-ivory py-20 md:py-32 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <div className="text-center mb-20">
+          <div className="text-center mb-14 md:mb-20">
             <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold mb-4">
               Specialties
             </div>
-            <h2 className="font-serif italic text-tmc-green text-4xl md:text-5xl leading-tight">
+            <h2 className="font-serif italic text-tmc-green text-3xl md:text-5xl leading-tight">
               Care across Türkiye&apos;s leading specialties.
             </h2>
           </div>
@@ -58,7 +58,7 @@ export function Services() {
                 key={s.slug}
                 variants={card}
                 href={`/services/${s.slug}`}
-                className="group block border border-tmc-gold/30 bg-white/30 p-10 transition-all duration-300 hover:-translate-y-2 hover:border-tmc-gold hover:shadow-[0_12px_40px_-12px_rgba(11,57,43,0.25)]"
+                className="group block border border-tmc-gold/30 bg-white/30 p-8 md:p-10 transition-all duration-300 hover:-translate-y-2 hover:border-tmc-gold hover:shadow-[0_12px_40px_-12px_rgba(11,57,43,0.25)]"
               >
                 <Icon
                   className="text-tmc-gold mb-6 group-hover:text-tmc-green-deep transition-colors"
@@ -73,7 +73,6 @@ export function Services() {
                   {s.short}
                 </p>
 
-                {/* Hover-only scope teaser */}
                 <div className="overflow-hidden max-h-0 group-hover:max-h-48 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
                   <ul className="text-xs text-tmc-ink/65 space-y-2 mt-5 pt-5 border-t border-tmc-gold/15">
                     {s.scope.slice(0, 3).map((item, i) => (
@@ -94,7 +93,7 @@ export function Services() {
         </motion.div>
 
         <Reveal delay={0.2}>
-          <p className="text-center text-xs uppercase tracking-[0.3em] text-tmc-muted mt-16">
+          <p className="text-center text-xs uppercase tracking-[0.3em] text-tmc-muted mt-12 md:mt-16">
             And more
           </p>
         </Reveal>

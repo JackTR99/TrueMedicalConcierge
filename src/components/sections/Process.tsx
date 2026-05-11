@@ -45,14 +45,14 @@ const step: Variants = {
 
 export function Process() {
   return (
-    <section className="bg-tmc-parchment py-32 px-8">
+    <section className="bg-tmc-parchment py-20 md:py-32 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <div className="text-center mb-20">
+          <div className="text-center mb-14 md:mb-20">
             <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold mb-4">
               Process
             </div>
-            <h2 className="font-serif italic text-tmc-green text-4xl md:text-5xl leading-tight">
+            <h2 className="font-serif italic text-tmc-green text-3xl md:text-5xl leading-tight">
               Four steps, end to end.
             </h2>
           </div>
@@ -63,7 +63,7 @@ export function Process() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-4 gap-12"
+          className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12"
         >
           {steps.map((s) => (
             <motion.div
@@ -71,10 +71,10 @@ export function Process() {
               variants={step}
               className="text-center md:text-left"
             >
-              <div className="font-serif italic text-tmc-gold text-5xl md:text-6xl mb-6">
+              <div className="font-serif italic text-tmc-gold text-5xl md:text-6xl mb-4 md:mb-6">
                 {s.numeral}
               </div>
-              <h3 className="font-serif italic text-tmc-green text-xl md:text-2xl mb-4">
+              <h3 className="font-serif italic text-tmc-green text-xl md:text-2xl mb-3 md:mb-4">
                 {s.title}
               </h3>
               <p className="text-sm text-tmc-ink/75 leading-relaxed">

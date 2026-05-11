@@ -27,14 +27,14 @@ export default async function PortalAppLayout({
     .maybeSingle();
 
   return (
-    <div className="flex min-h-screen bg-tmc-ivory">
+    <div className="flex flex-col md:flex-row min-h-screen bg-tmc-ivory">
       <PortalSidebar />
       <div className="flex-1 flex flex-col min-w-0">
         <PortalHeader
           name={profile?.full_name ?? user.email ?? "Patient"}
           fileNo={patient?.file_no ?? "—"}
         />
-        <main className="flex-1 px-8 py-12 md:px-12">{children}</main>
+        <main className="flex-1 px-6 md:px-12 py-8 md:py-12">{children}</main>
       </div>
     </div>
   );

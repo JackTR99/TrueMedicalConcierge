@@ -5,16 +5,16 @@ import { Reveal } from "@/components/Reveal";
 
 export function Closing() {
   return (
-    <section className="bg-tmc-green text-tmc-ivory py-32 px-8">
+    <section className="bg-tmc-green text-tmc-ivory py-20 md:py-32 px-6 md:px-8">
       <Reveal>
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif italic text-4xl md:text-5xl lg:text-6xl leading-tight">
+          <h2 className="font-serif italic text-3xl md:text-5xl lg:text-6xl leading-tight">
             Let us begin your file.
           </h2>
-          <p className="mt-8 text-base md:text-lg text-tmc-ivory/80 max-w-xl mx-auto">
+          <p className="mt-6 md:mt-8 text-base md:text-lg text-tmc-ivory/80 max-w-xl mx-auto">
             We are ready for our first conversation in a process guided with care.
           </p>
-          <div className="mt-14 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="mt-10 md:mt-14 flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-10 py-4 bg-tmc-gold text-tmc-green-deep border border-tmc-gold text-xs md:text-sm uppercase tracking-[0.25em] transition-all duration-300 hover:bg-tmc-gold-light"

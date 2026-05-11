@@ -36,24 +36,24 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
 export function InNumbers() {
   return (
-    <section className="bg-tmc-green text-tmc-ivory py-32 px-8">
+    <section className="bg-tmc-green text-tmc-ivory py-20 md:py-32 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <div className="text-center mb-20">
+          <div className="text-center mb-14 md:mb-20">
             <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold mb-4">
               By the numbers
             </div>
-            <h2 className="font-serif italic text-4xl md:text-5xl leading-tight">
+            <h2 className="font-serif italic text-3xl md:text-5xl leading-tight">
               Discreet, but considerable.
             </h2>
           </div>
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
-                <p className="font-serif italic text-tmc-gold text-5xl md:text-6xl mb-4">
+                <p className="font-serif italic text-tmc-gold text-4xl md:text-6xl mb-3 md:mb-4">
                   <Counter to={s.value} suffix={s.suffix} />
                 </p>
                 <p className="text-[10px] uppercase tracking-[0.3em] text-tmc-ivory/75">

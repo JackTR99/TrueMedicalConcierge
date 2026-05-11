@@ -57,14 +57,14 @@ const cardV: Variants = {
 
 export function Network() {
   return (
-    <section className="bg-tmc-ivory py-32 px-8">
+    <section className="bg-tmc-ivory py-20 md:py-32 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <div className="text-center mb-20">
+          <div className="text-center mb-14 md:mb-20">
             <div className="text-xs uppercase tracking-[0.3em] text-tmc-gold mb-4">
               Our network
             </div>
-            <h2 className="font-serif italic text-tmc-green text-4xl md:text-5xl leading-tight">
+            <h2 className="font-serif italic text-tmc-green text-3xl md:text-5xl leading-tight">
               Türkiye&apos;s leading consultants.
             </h2>
           </div>
@@ -81,23 +81,23 @@ export function Network() {
             <motion.div
               key={c.name}
               variants={cardV}
-              className="flex gap-6 border border-tmc-gold/25 bg-white/30 p-8 transition-all duration-300 hover:border-tmc-gold hover:shadow-[0_8px_30px_-12px_rgba(11,57,43,0.18)]"
+              className="flex gap-5 md:gap-6 border border-tmc-gold/25 bg-white/30 p-6 md:p-8 transition-all duration-300 hover:border-tmc-gold hover:shadow-[0_8px_30px_-12px_rgba(11,57,43,0.18)]"
             >
-              <div className="shrink-0 w-20 h-20 rounded-full border border-tmc-gold/40 flex items-center justify-center font-serif italic text-tmc-gold text-2xl">
+              <div className="shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-full border border-tmc-gold/40 flex items-center justify-center font-serif italic text-tmc-gold text-xl md:text-2xl">
                 {c.initials}
               </div>
               <div className="flex-1 min-w-0">
                 <p className="text-[10px] uppercase tracking-[0.3em] text-tmc-muted mb-1">
                   {c.title}
                 </p>
-                <h3 className="font-serif italic text-tmc-green text-xl md:text-2xl mb-2">
+                <h3 className="font-serif italic text-tmc-green text-lg md:text-2xl mb-2 leading-tight">
                   {c.name}
                 </h3>
                 <p className="text-sm text-tmc-ink/80 leading-relaxed">
                   {c.specialty}
                 </p>
                 <p className="text-xs text-tmc-muted mt-1">{c.clinic}</p>
-                <div className="mt-4 flex gap-2">
+                <div className="mt-4 flex gap-2 flex-wrap">
                   {c.langs.map((l) => (
                     <span
                       key={l}
@@ -113,7 +113,7 @@ export function Network() {
         </motion.div>
 
         <Reveal delay={0.2}>
-          <p className="text-center text-xs uppercase tracking-[0.3em] text-tmc-muted mt-16">
+          <p className="text-center text-xs uppercase tracking-[0.3em] text-tmc-muted mt-12 md:mt-16">
             And many more
           </p>
         </Reveal>

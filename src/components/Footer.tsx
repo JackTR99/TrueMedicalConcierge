@@ -2,18 +2,18 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="relative bg-tmc-green-deep text-tmc-ivory/80 px-8 py-16 overflow-hidden">
+    <footer className="relative bg-tmc-green-deep text-tmc-ivory/80 px-6 md:px-8 py-12 md:py-16 overflow-hidden">
       <Image
         src="/logo.png"
         alt=""
         width={600}
         height={600}
         aria-hidden
-        className="absolute -right-40 -bottom-40 w-[32rem] h-[32rem] object-contain opacity-[0.05] pointer-events-none select-none"
+        className="absolute -right-40 -bottom-40 w-[24rem] md:w-[32rem] h-[24rem] md:h-[32rem] object-contain opacity-[0.05] pointer-events-none select-none"
       />
 
       <div className="relative max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mb-10 md:mb-12">
           <div>
             <div className="text-sm uppercase tracking-[0.3em] text-tmc-gold mb-4">
               True Medical Concierge
@@ -48,11 +48,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-tmc-gold/20 flex flex-col md:flex-row justify-between items-center gap-4">
-          <span className="text-xs uppercase tracking-[0.25em] text-tmc-ivory/50">
+        <div className="pt-6 md:pt-8 border-t border-tmc-gold/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 md:gap-4">
+          <span className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-tmc-ivory/50">
             © MMXXVI True Medical Concierge
           </span>
-          <span className="text-xs uppercase tracking-[0.25em] text-tmc-ivory/50">
+          <span className="text-[10px] md:text-xs uppercase tracking-[0.25em] text-tmc-ivory/50">
             EN · TR · DE · FR
           </span>
         </div>
